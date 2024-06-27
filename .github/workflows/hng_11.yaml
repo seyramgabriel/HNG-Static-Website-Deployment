@@ -21,7 +21,8 @@ jobs:
       - name: Copy website files to NGINX directory
         run: |
           sudo rsync -av --exclude='.github' $GITHUB_WORKSPACE/ /var/www/html/
-
+          ls /var/www/html/
+          
       - name: Start and enable NGINX
         run: |
           sudo systemctl start nginx
