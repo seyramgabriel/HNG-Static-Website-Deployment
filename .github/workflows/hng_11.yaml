@@ -22,7 +22,7 @@ jobs:
         run: |
           sudo rsync -av --exclude='.github' $GITHUB_WORKSPACE/ /var/www/html/
           ls /var/www/html/
-          
+
       - name: Start and enable NGINX
         run: |
           sudo systemctl start nginx
@@ -31,3 +31,6 @@ jobs:
       - name: Check NGINX status
         run: |
           sudo systemctl status nginx
+      
+      - name: curl the website
+        run: curl http://localhost
