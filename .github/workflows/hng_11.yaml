@@ -15,8 +15,10 @@ jobs:
 
       - name: Install NGINX
         run: |
-          sudo apt update
-          sudo apt install -y nginx
+          if ! nginx -v > /dev/null 2>&1; then
+            sudo apt update
+            sudo apt install -y nginx
+          fi
 
       - name: Copy website files to NGINX directory
         run: |
