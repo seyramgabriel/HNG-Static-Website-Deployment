@@ -95,8 +95,8 @@ Access your website using the public IP address of your cloud instance to verify
 
 ## Static Website Content
 
-```html
 HTML (index.html)
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
