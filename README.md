@@ -74,7 +74,7 @@ jobs:
       - name: Check NGINX status
         run: |
           sudo systemctl status nginx
-
+```
 
 ### 4. Prepare Static Website
 
@@ -95,6 +95,7 @@ Access your website using the public IP address of your cloud instance to verify
 
 ## Static Website Content
 
+```html
 HTML (index.html)
 <!DOCTYPE html>
 <html lang="en">
@@ -127,9 +128,10 @@ HTML (index.html)
     <script src="script.js"></script>
 </body>
 </html>
+```
 
 ## CSS (styles.css)
-
+```css
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -171,13 +173,14 @@ footer {
     width: 100%;
     bottom: 0;
 }
+```
 
 ## JavaScript (script.js)
-
+```.js
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Website Loaded Successfully!');
 });
-
+```
 
 ### Conclusion
 
